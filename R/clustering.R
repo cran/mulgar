@@ -37,7 +37,7 @@
 #'     axes="bottomleft")
 #' }
 hierfly <- function(data, h=NULL, metric="euclidean", method="ward.D2", scale=TRUE) {
-  if (tibble::is.tibble(data)) data <- as.data.frame(data)
+  if (tibble::is_tibble(data)) data <- as.data.frame(data)
 	if (scale) data <- rescaler(data)
 	id <- 1:nrow(data)
 	cat_var <- sapply(data, is.factor)
@@ -119,9 +119,8 @@ combinerows <- function(df, cvar) {
 #' @examples
 #' require(mclust)
 #' data(clusters)
-#' clusters_BIC <- mclustBIC(clusters[,1:5])
+#' clusters_BIC <- mclustBIC(clusters[,1:5], G=2:6)
 #' ggmcbic(clusters_BIC)
-#' ggmcbic(clusters_BIC, cl=3:9)
 #' ggmcbic(clusters_BIC, top=4)
 #'
 #' data(simple_clusters)
