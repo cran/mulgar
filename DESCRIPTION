@@ -1,7 +1,7 @@
 Package: mulgar
 Title: Functions for Pre-Processing Data for Multivariate Data
         Visualisation using Tours
-Version: 1.0.2
+Version: 1.0.5
 Authors@R: c(
     person("Dianne", "Cook",
            role = c("aut", "cre"),
@@ -15,20 +15,20 @@ Description: This is a companion to the book Cook, D. and Laa, U. (2023) <https:
   "Interactively exploring high-dimensional data and models in R".  
   by Cook and Laa. It contains useful functions for processing data in preparation for 
   visualising with a tour. There are also several sample data sets.
-Depends: R (>= 4.0)
+Depends: R (>= 4.1.0)
 Imports: geozoo, tibble, ggplot2, tidyr, dplyr, purrr, stats, methods
-Suggests: tourr, ggdendro, colorspace, mclust, kohonen
+Suggests: tourr, ggdendro, colorspace, mclust, kohonen, GGally
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: bzip2
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 URL: https://dicook.github.io/mulgar/, https://github.com/dicook/mulgar
 BugReports: https://github.com/dicook/mulgar/issues
 NeedsCompilation: no
-Packaged: 2023-08-25 21:45:41 UTC; cookd
+Packaged: 2025-04-07 01:55:56 UTC; cookd
 Author: Dianne Cook [aut, cre] (<https://orcid.org/0000-0002-3813-7155>),
   Ursula Laa [aut] (<https://orcid.org/0000-0002-0249-6439>)
 Maintainer: Dianne Cook <dicook@monash.edu>
 Repository: CRAN
-Date/Publication: 2023-08-25 22:00:02 UTC
+Date/Publication: 2025-04-07 02:30:02 UTC

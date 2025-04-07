@@ -2,7 +2,7 @@
 #'
 #' This is data from the 2018 testing, available from
 #' https://webfs.oecd.org/pisa2018/SPSS_STU_QQQ.zip.
-#' A subset of the data containing only
+#' A subset of the data containing samples from
 #' Australia and Indonesia, and the simulated
 #' scores for math, reading and science.
 #'
@@ -13,13 +13,13 @@
 #'
 #' @name pisa
 #' @docType data
-#' @format A data set with 26371 rows and 31 columns
+#' @format A data set with 10548 rows and 31 columns
 #' @keywords datasets
 #' @examples
 #'
 #' require(dplyr)
 #' data(pisa)
-#' pisa %>% count(CNT)
+#' pisa |> count(CNT)
 NULL
 
 #' AFLW player statistics
@@ -315,21 +315,156 @@ NULL
 #'   theme(aspect.ratio=1)
 NULL
 
-#' Challenge data sets
+#' Cluster challenge data sets
 #'
-#' Simulated data with different structure
+#' Simulated data with different structures
 #'
 #' \describe{
 #' \item{x1, x2, ... }{numeric variables}
 #' }
 #'
-#' @name c1
-#' @aliases c2 c3 c4 c5 c6 c7
+#' @name clusterchallenges
 #' @docType data
 #' @format A datasets with differing number of rows and columns
 #' @keywords datasets
+#' @source Created by Di Cook.
 #' @examples
 #' require(ggplot2)
+#' data(c1)
 #' ggplot(c1, aes(x=x1, y=x2)) +
 #'   geom_point() + theme(aspect.ratio=1)
 NULL
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c1"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c2"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c3"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c4"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c5"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c6"
+
+#' @rdname clusterchallenges
+#' @format NULL
+"c7"
+
+#' Data sets with anomalies
+#'
+#' Simulated data with anomalies
+#'
+#' \describe{
+#' \item{x1, x2, x3, x4}{numeric variables}
+#' }
+#'
+#' @name anomalies
+#' @docType data
+#' @format A datasets with anomalies
+#' @keywords datasets
+#' @source Created by Di Cook.
+#' @examples
+#' require(GGally)
+#' data(anomaly1)
+#' data(anomaly2)
+#' ggscatmat(anomaly1)
+#' ggscatmat(anomaly2)
+NULL
+
+#' @rdname anomalies
+#' @format NULL
+"anomaly1"
+
+#' @rdname anomalies
+#' @format NULL
+"anomaly2"
+
+#' @rdname anomalies
+#' @format NULL
+"anomaly3"
+
+#' @rdname anomalies
+#' @format NULL
+"anomaly4"
+
+#' @rdname anomalies
+#' @format NULL
+"anomaly5"
+
+#' Data sets with different types of association
+#'
+#' Simulated data with various associations
+#'
+#' \describe{
+#' \item{x1, x2, x3, x4}{numeric variables}
+#' }
+#'
+#' @name associations
+#' @docType data
+#' @format A datasets with various association
+#' @keywords datasets
+#' @examples
+#' require(GGally)
+#' data(assoc1)
+#' ggscatmat(assoc1)
+NULL
+
+#' @rdname associations
+#' @format NULL
+"assoc1"
+
+#' @rdname associations
+#' @format NULL
+"assoc2"
+
+#' @rdname associations
+#' @format NULL
+"assoc3"
+
+#' Data sets generated using copulas
+#'
+#' Simulated data from covsim, using different copula models
+#'
+#' \describe{
+#' \item{x1, x2, x3, x4, x5}{numeric variables}
+#' }
+#'
+#' @name copula
+#' @docType data
+#' @format A datasets with various association
+#' @keywords datasets
+#' @examples
+#' require(GGally)
+#' data(copclayton)
+#' ggscatmat(copclayton)
+NULL
+
+#' @rdname copula
+#' @format NULL
+"copclayton"
+
+#' @rdname copula
+#' @format NULL
+"copjoe"
+
+#' @rdname copula
+#' @format NULL
+"copfrank"
+
+#' @rdname copula
+#' @format NULL
+"copnorm"
+
